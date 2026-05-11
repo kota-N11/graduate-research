@@ -21,7 +21,7 @@ DATA_DIR = ROOT / "data" / "stories"
 
 MODEL_NAME = "google/gemma-2-2b-it"
 N_STORIES_PER_TOPIC = 5
-MAX_NEW_TOKENS = 512
+MAX_NEW_TOKENS = 2048
 
 STORY_PROMPT = """\
 Write {n} different stories based on the following premise.
@@ -60,11 +60,19 @@ def load_config() -> tuple[list[str], list[str]]:
     return emotions, topics
 
 
-def split_stories(raw: str, n: int) -> list[str]:
-    """Split model output into individual stories by common header patterns."""
+def split_stories(raw: str, n: int, min_chars: int = 150) -> list[str]:
+    """Split model output into individual stories by common separator patterns."""
     import re
-    parts = re.split(r"(?:\[story\s*\d+\]|##\s*Story\s*\d+[:\.]?)", raw, flags=re.IGNORECASE)
-    stories = [p.strip() for p in parts if p.strip()]
+    parts = re.split(
+        r"(?:\[story\s*\d+\]"         # [story N]
+        r"|\*\*?#{1,3}\s+[^\n]+"      # **## Title or ## Title (bold+header)
+        r"|#{2,3}\s+[^\n]+"           # ## Title or ### Title
+        r"|\*\*Story\s*\d+\*\*"       # **Story N**
+        r"|\*{3,}|---+)",             # *** or ---
+        raw,
+        flags=re.IGNORECASE,
+    )
+    stories = [p.strip() for p in parts if len(p.strip()) >= min_chars]
     return stories[:n]
 
 
