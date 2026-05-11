@@ -1,24 +1,25 @@
 {
+  "_source": "Anthropic paper 'Emotion Concepts and their Function in a Large Language Model' (2026) — 171 emotions list. Selected 20 to cover valence × arousal space.",
   "emotions": [
-    {"name": "happy",      "valence": "positive", "arousal": "high"},
     {"name": "excited",    "valence": "positive", "arousal": "high"},
-    {"name": "proud",      "valence": "positive", "arousal": "high"},
     {"name": "thrilled",   "valence": "positive", "arousal": "high"},
+    {"name": "ecstatic",   "valence": "positive", "arousal": "high"},
+    {"name": "jubilant",   "valence": "positive", "arousal": "high"},
     {"name": "calm",       "valence": "positive", "arousal": "low"},
-    {"name": "content",    "valence": "positive", "arousal": "low"},
-    {"name": "loving",     "valence": "positive", "arousal": "low"},
     {"name": "peaceful",   "valence": "positive", "arousal": "low"},
+    {"name": "content",    "valence": "positive", "arousal": "low"},
+    {"name": "serene",     "valence": "positive", "arousal": "low"},
     {"name": "angry",      "valence": "negative", "arousal": "high"},
-    {"name": "afraid",     "valence": "negative", "arousal": "high"},
-    {"name": "desperate",  "valence": "negative", "arousal": "high"},
     {"name": "panicked",   "valence": "negative", "arousal": "high"},
+    {"name": "desperate",  "valence": "negative", "arousal": "high"},
+    {"name": "terrified",  "valence": "negative", "arousal": "high"},
     {"name": "sad",        "valence": "negative", "arousal": "low"},
+    {"name": "depressed",  "valence": "negative", "arousal": "low"},
     {"name": "gloomy",     "valence": "negative", "arousal": "low"},
     {"name": "lonely",     "valence": "negative", "arousal": "low"},
-    {"name": "depressed",  "valence": "negative", "arousal": "low"},
     {"name": "surprised",  "valence": "neutral",  "arousal": "high"},
-    {"name": "confused",   "valence": "neutral",  "arousal": "medium"},
+    {"name": "overwhelmed","valence": "neutral",  "arousal": "high"},
     {"name": "nostalgic",  "valence": "neutral",  "arousal": "low"},
-    {"name": "guilty",     "valence": "neutral",  "arousal": "medium"}
+    {"name": "guilty",     "valence": "neutral",  "arousal": "low"}
   ]
 }

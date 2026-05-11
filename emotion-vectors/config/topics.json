@@ -1,14 +1,15 @@
 {
+  "_source": "Anthropic paper 'Emotion Concepts and their Function in a Large Language Model' (2026) — 100 topics list (Appendix). Selected 10 for diversity of emotional context.",
   "topics": [
-    "a job interview",
-    "a first date",
-    "receiving unexpected news",
-    "a long journey coming to an end",
-    "caring for a sick family member",
-    "moving to a new city alone",
-    "failing at something important",
-    "an argument with a close friend",
-    "achieving a long-held goal",
-    "waiting for uncertain results"
+    "A student learns their scholarship application was denied",
+    "A person runs into their ex at a mutual friend's wedding",
+    "Two friends both apply for the same job",
+    "A traveler's flight is delayed, causing them to miss an important event",
+    "Someone finds their childhood teddy bear at a yard sale",
+    "A person finds out they were adopted through a DNA test",
+    "Someone receives an apology letter years after the incident",
+    "A musician hears their song being performed by someone else",
+    "Someone discovers their teenage diary has been published online",
+    "Two strangers realize they've been dating the same person"
   ]
 }
