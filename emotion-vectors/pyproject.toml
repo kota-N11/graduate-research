@@ -1,0 +1,23 @@
+[project]
+name = "emotion-vectors"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.13.0",
+    "matplotlib>=3.10.9",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
+    "seaborn>=0.13.2",
+    "torch>=2.11.0",
+    "tqdm>=4.67.3",
+    "transformer-lens>=3.1.0",
+    "transformers>=5.7.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+]
