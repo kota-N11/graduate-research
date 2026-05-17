@@ -107,6 +107,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--emotion-slice", type=str, default=None,
                         help="感情リストの範囲 例: '0:43'。省略時は全感情")
+    parser.add_argument("--n-topics", type=int, default=None,
+                        help="使用するトピック数（テスト用）。省略時は全トピック")
+    parser.add_argument("--n-stories", type=int, default=None,
+                        help="トピックあたりのストーリー数（テスト用）。省略時はデフォルト値")
     args = parser.parse_args()
 
     os.environ.setdefault("TRANSFORMERLENS_ALLOW_MPS", "1")
@@ -122,8 +126,11 @@ def main() -> None:
     if args.emotion_slice:
         start, end = (int(x) for x in args.emotion_slice.split(":"))
         emotions = emotions[start:end]
+    if args.n_topics:
+        topics = topics[:args.n_topics]
 
-    print(f"Emotions: {len(emotions)}, Topics: {len(topics)}, Stories/topic: {N_STORIES_PER_TOPIC}")
+    n_stories = args.n_stories or N_STORIES_PER_TOPIC
+    print(f"Emotions: {len(emotions)}, Topics: {len(topics)}, Stories/topic: {n_stories}")
     print(f"Total target: {len(emotions) * len(topics) * N_STORIES_PER_TOPIC} stories")
 
     print(f"\nLoading {MODEL_NAME}...")
@@ -153,7 +160,7 @@ def main() -> None:
                 done += 1
                 continue
 
-            stories = generate_stories(model, tokenizer, emotion, topic, N_STORIES_PER_TOPIC, device)
+            stories = generate_stories(model, tokenizer, emotion, topic, n_stories, device)
 
             out_path.write_text(json.dumps({
                 "emotion": emotion,
