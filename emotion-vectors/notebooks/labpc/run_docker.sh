@@ -10,6 +10,9 @@ cd "$PROJECT_DIR"
 IMAGE_NAME="emotion-vectors"
 mkdir -p data/stories data/activations data/vectors logs
 
+# 開始時刻を記録（monitor.sh が参照する）
+echo "$(date +%s)" > logs/start_time
+
 # イメージをビルド（初回のみ数分かかる）
 echo "=== Dockerイメージをビルド ==="
 docker build -t "$IMAGE_NAME" -f notebooks/labpc/Dockerfile .

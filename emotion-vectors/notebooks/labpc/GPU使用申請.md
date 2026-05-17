@@ -54,11 +54,9 @@ docker rmi emotion-vectors
 
 ## 実行方法
 
-```bash
-# 1. コードをclone
-git clone https://github.com/kota-N11/vault.git
+ # まず動作確認（数分で終わる）
+  bash notebooks/labpc/test_docker.sh
 
-# 2. 実行（セットアップ〜生成まで自動）
-cd vault/school/5/eary/Graduate/emotion-vectors
-bash notebooks/labpc/run_docker.sh
-```
+  # 個別実行
+  bash notebooks/labpc/run_docker.sh generate  # 生成のみ
+  bash notebooks/labpc/run_docker.sh extract   # 抽出のみ

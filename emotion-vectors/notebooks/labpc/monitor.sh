@@ -7,7 +7,8 @@ INTERVAL="${1:-0}"
 
 START_FILE="$PROJECT_DIR/logs/start_time"
 if [ ! -f "$START_FILE" ]; then
-    date +%s > "$START_FILE"
+    echo "警告: start_time が見つかりません。run_docker.sh を先に実行してください。"
+    exit 1
 fi
 START_TS=$(cat "$START_FILE")
 
