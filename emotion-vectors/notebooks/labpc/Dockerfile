@@ -6,12 +6,14 @@ RUN pip install --no-cache-dir \
     'transformers>=4.40' \
     accelerate \
     tqdm \
-    huggingface_hub
+    huggingface_hub \
+    transformer-lens \
+    numpy
 
 COPY config/ config/
 COPY src/ src/
 COPY prompts/ prompts/
 
-RUN mkdir -p data/stories logs
+RUN mkdir -p data/stories data/activations data/vectors logs
 
 CMD ["python", "src/generate.py"]
