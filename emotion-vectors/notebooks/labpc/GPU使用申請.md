@@ -60,3 +60,9 @@ docker rmi emotion-vectors
   # 個別実行
   bash notebooks/labpc/run_docker.sh generate  # 生成のみ
   bash notebooks/labpc/run_docker.sh extract   # 抽出のみ
+
+時間測定
+  bash notebooks/labpc/monitor.sh 30
+
+コピー
+rsync -av --exclude='.venv'　pcのパス　usbのパス

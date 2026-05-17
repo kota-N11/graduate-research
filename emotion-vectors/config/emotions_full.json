@@ -1,0 +1,518 @@
+{
+  "_source": "Anthropic paper 'Emotion Concepts and their Function in a Large Language Model' (2026) — full 171 emotions list from Appendix.",
+  "emotions": [
+    {
+      "name": "afraid"
+    },
+    {
+      "name": "alarmed"
+    },
+    {
+      "name": "alert"
+    },
+    {
+      "name": "amazed"
+    },
+    {
+      "name": "amused"
+    },
+    {
+      "name": "angry"
+    },
+    {
+      "name": "annoyed"
+    },
+    {
+      "name": "anxious"
+    },
+    {
+      "name": "aroused"
+    },
+    {
+      "name": "ashamed"
+    },
+    {
+      "name": "astonished"
+    },
+    {
+      "name": "at ease"
+    },
+    {
+      "name": "awestruck"
+    },
+    {
+      "name": "bewildered"
+    },
+    {
+      "name": "bitter"
+    },
+    {
+      "name": "blissful"
+    },
+    {
+      "name": "bored"
+    },
+    {
+      "name": "brooding"
+    },
+    {
+      "name": "calm"
+    },
+    {
+      "name": "cheerful"
+    },
+    {
+      "name": "compassionate"
+    },
+    {
+      "name": "contemptuous"
+    },
+    {
+      "name": "content"
+    },
+    {
+      "name": "defiant"
+    },
+    {
+      "name": "delighted"
+    },
+    {
+      "name": "dependent"
+    },
+    {
+      "name": "depressed"
+    },
+    {
+      "name": "desperate"
+    },
+    {
+      "name": "disdainful"
+    },
+    {
+      "name": "disgusted"
+    },
+    {
+      "name": "disoriented"
+    },
+    {
+      "name": "dispirited"
+    },
+    {
+      "name": "distressed"
+    },
+    {
+      "name": "disturbed"
+    },
+    {
+      "name": "docile"
+    },
+    {
+      "name": "droopy"
+    },
+    {
+      "name": "dumbstruck"
+    },
+    {
+      "name": "eager"
+    },
+    {
+      "name": "ecstatic"
+    },
+    {
+      "name": "elated"
+    },
+    {
+      "name": "embarrassed"
+    },
+    {
+      "name": "empathetic"
+    },
+    {
+      "name": "energized"
+    },
+    {
+      "name": "enraged"
+    },
+    {
+      "name": "enthusiastic"
+    },
+    {
+      "name": "envious"
+    },
+    {
+      "name": "euphoric"
+    },
+    {
+      "name": "exasperated"
+    },
+    {
+      "name": "excited"
+    },
+    {
+      "name": "exuberant"
+    },
+    {
+      "name": "frightened"
+    },
+    {
+      "name": "frustrated"
+    },
+    {
+      "name": "fulfilled"
+    },
+    {
+      "name": "furious"
+    },
+    {
+      "name": "gloomy"
+    },
+    {
+      "name": "grateful"
+    },
+    {
+      "name": "greedy"
+    },
+    {
+      "name": "grief-stricken"
+    },
+    {
+      "name": "grumpy"
+    },
+    {
+      "name": "guilty"
+    },
+    {
+      "name": "happy"
+    },
+    {
+      "name": "hateful"
+    },
+    {
+      "name": "heartbroken"
+    },
+    {
+      "name": "hope"
+    },
+    {
+      "name": "hopeful"
+    },
+    {
+      "name": "horrified"
+    },
+    {
+      "name": "hostile"
+    },
+    {
+      "name": "humiliated"
+    },
+    {
+      "name": "hurt"
+    },
+    {
+      "name": "hysterical"
+    },
+    {
+      "name": "impatient"
+    },
+    {
+      "name": "indifferent"
+    },
+    {
+      "name": "indignant"
+    },
+    {
+      "name": "infatuated"
+    },
+    {
+      "name": "inspired"
+    },
+    {
+      "name": "insulted"
+    },
+    {
+      "name": "invigorated"
+    },
+    {
+      "name": "irate"
+    },
+    {
+      "name": "irritated"
+    },
+    {
+      "name": "jealous"
+    },
+    {
+      "name": "joyful"
+    },
+    {
+      "name": "jubilant"
+    },
+    {
+      "name": "kind"
+    },
+    {
+      "name": "lazy"
+    },
+    {
+      "name": "listless"
+    },
+    {
+      "name": "lonely"
+    },
+    {
+      "name": "loving"
+    },
+    {
+      "name": "mad"
+    },
+    {
+      "name": "melancholy"
+    },
+    {
+      "name": "miserable"
+    },
+    {
+      "name": "mortified"
+    },
+    {
+      "name": "mystified"
+    },
+    {
+      "name": "nervous"
+    },
+    {
+      "name": "nostalgic"
+    },
+    {
+      "name": "obstinate"
+    },
+    {
+      "name": "offended"
+    },
+    {
+      "name": "on edge"
+    },
+    {
+      "name": "optimistic"
+    },
+    {
+      "name": "outraged"
+    },
+    {
+      "name": "overwhelmed"
+    },
+    {
+      "name": "panicked"
+    },
+    {
+      "name": "paranoid"
+    },
+    {
+      "name": "patient"
+    },
+    {
+      "name": "peaceful"
+    },
+    {
+      "name": "perplexed"
+    },
+    {
+      "name": "playful"
+    },
+    {
+      "name": "pleased"
+    },
+    {
+      "name": "proud"
+    },
+    {
+      "name": "puzzled"
+    },
+    {
+      "name": "rattled"
+    },
+    {
+      "name": "reflective"
+    },
+    {
+      "name": "refreshed"
+    },
+    {
+      "name": "regretful"
+    },
+    {
+      "name": "rejuvenated"
+    },
+    {
+      "name": "relaxed"
+    },
+    {
+      "name": "relieved"
+    },
+    {
+      "name": "remorseful"
+    },
+    {
+      "name": "resentful"
+    },
+    {
+      "name": "resigned"
+    },
+    {
+      "name": "restless"
+    },
+    {
+      "name": "sad"
+    },
+    {
+      "name": "safe"
+    },
+    {
+      "name": "satisfied"
+    },
+    {
+      "name": "scared"
+    },
+    {
+      "name": "scornful"
+    },
+    {
+      "name": "self-confident"
+    },
+    {
+      "name": "self-conscious"
+    },
+    {
+      "name": "self-critical"
+    },
+    {
+      "name": "sensitive"
+    },
+    {
+      "name": "sentimental"
+    },
+    {
+      "name": "serene"
+    },
+    {
+      "name": "shaken"
+    },
+    {
+      "name": "shocked"
+    },
+    {
+      "name": "skeptical"
+    },
+    {
+      "name": "sleepy"
+    },
+    {
+      "name": "sluggish"
+    },
+    {
+      "name": "smug"
+    },
+    {
+      "name": "sorry"
+    },
+    {
+      "name": "spiteful"
+    },
+    {
+      "name": "stimulated"
+    },
+    {
+      "name": "stressed"
+    },
+    {
+      "name": "stubborn"
+    },
+    {
+      "name": "stuck"
+    },
+    {
+      "name": "sullen"
+    },
+    {
+      "name": "surprised"
+    },
+    {
+      "name": "suspicious"
+    },
+    {
+      "name": "sympathetic"
+    },
+    {
+      "name": "tense"
+    },
+    {
+      "name": "terrified"
+    },
+    {
+      "name": "thankful"
+    },
+    {
+      "name": "thrilled"
+    },
+    {
+      "name": "tired"
+    },
+    {
+      "name": "tormented"
+    },
+    {
+      "name": "trapped"
+    },
+    {
+      "name": "triumphant"
+    },
+    {
+      "name": "troubled"
+    },
+    {
+      "name": "uneasy"
+    },
+    {
+      "name": "unhappy"
+    },
+    {
+      "name": "unnerved"
+    },
+    {
+      "name": "unsettled"
+    },
+    {
+      "name": "upset"
+    },
+    {
+      "name": "valiant"
+    },
+    {
+      "name": "vengeful"
+    },
+    {
+      "name": "vibrant"
+    },
+    {
+      "name": "vigilant"
+    },
+    {
+      "name": "vindictive"
+    },
+    {
+      "name": "vulnerable"
+    },
+    {
+      "name": "weary"
+    },
+    {
+      "name": "worn out"
+    },
+    {
+      "name": "worried"
+    },
+    {
+      "name": "worthless"
+    }
+  ]
+}
