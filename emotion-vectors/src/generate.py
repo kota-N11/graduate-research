@@ -103,11 +103,26 @@ def generate_stories(
 
 
 def main() -> None:
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--emotion-slice", type=str, default=None,
+                        help="感情リストの範囲 例: '0:43'。省略時は全感情")
+    args = parser.parse_args()
+
     os.environ.setdefault("TRANSFORMERLENS_ALLOW_MPS", "1")
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
     print(f"Device: {device}")
 
     emotions, topics = load_config()
+    if args.emotion_slice:
+        start, end = (int(x) for x in args.emotion_slice.split(":"))
+        emotions = emotions[start:end]
+
     print(f"Emotions: {len(emotions)}, Topics: {len(topics)}, Stories/topic: {N_STORIES_PER_TOPIC}")
     print(f"Total target: {len(emotions) * len(topics) * N_STORIES_PER_TOPIC} stories")
 
