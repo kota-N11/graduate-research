@@ -12,7 +12,6 @@ RUN pip install --no-cache-dir \
 
 COPY config/ config/
 COPY src/ src/
-COPY prompts/ prompts/
 
 RUN mkdir -p data/stories data/activations data/vectors logs
 
