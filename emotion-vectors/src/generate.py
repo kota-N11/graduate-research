@@ -1,7 +1,7 @@
 """Step 1: Story generation.
 
-Generates ~1000 stories using Gemma 2 2B-it on MPS.
-Output: data/stories/{emotion}/{topic_idx}_{story_idx}.txt
+Generates 205,200 stories (171 emotions × 100 topics × 12 stories) using Gemma 2 2B-it.
+Output: data/stories/{emotion}/topic{topic_idx:02d}.json
 
 Run:  uv run python src/generate.py
 """
@@ -20,8 +20,8 @@ CONFIG_DIR = ROOT / "config"
 DATA_DIR = ROOT / "data" / "stories"
 
 MODEL_NAME = "google/gemma-2-2b-it"
-N_STORIES_PER_TOPIC = 5
-MAX_NEW_TOKENS = 2048
+N_STORIES_PER_TOPIC = 12
+MAX_NEW_TOKENS = 5120
 
 STORY_PROMPT = """\
 Write {n} different stories based on the following premise.
@@ -65,6 +65,7 @@ def split_stories(raw: str, n: int, min_chars: int = 150) -> list[str]:
     import re
     parts = re.split(
         r"(?:\[story\s*\d+\]"         # [story N]
+        r"|\*\*\[\d+\]\*\*"           # **[N]**
         r"|\*\*?#{1,3}\s+[^\n]+"      # **## Title or ## Title (bold+header)
         r"|#{2,3}\s+[^\n]+"           # ## Title or ### Title
         r"|\*\*Story\s*\d+\*\*"       # **Story N**
@@ -173,7 +174,7 @@ def main() -> None:
             elapsed = time.time() - t_start
             eta = elapsed / done * (total - done)
             print(f"[{done}/{total}] {emotion} / topic{topic_idx:02d} "
-                  f"({len(stories)} stories) — ETA {eta/60:.1f}min")
+                  f"({len(stories)} stories) — ETA {eta/60:.1f}min", flush=True)
 
     print(f"\nDone. {done - skipped} generated, {skipped} skipped (already existed).")
     print(f"Total time: {(time.time() - t_start)/60:.1f}min")
